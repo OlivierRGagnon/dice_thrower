@@ -17,13 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return  Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
           DiceWidget(value: _diceValue),
-          ElevatedButton(onPressed: () {
-            setState(() {
-              _diceValue = Random().nextInt(6) +1;
-            });
-            }, child: const Text('Lancer le dé'))
+          ElevatedButton(onPressed: () => onPressed(), child: const Text('Lancer le dé'))
         ] 
         ),
       )
@@ -31,6 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
   
   onPressed() {
-   
+    setState(() {
+      _diceValue = Random().nextInt(6) +1;
+    });
   }
 }

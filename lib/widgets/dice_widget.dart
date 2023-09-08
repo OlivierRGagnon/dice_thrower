@@ -10,8 +10,10 @@ class DiceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Padding(padding: const EdgeInsets.all(60.0),
-       child: Text(_value.toString()
+      child: Padding(
+        padding: const EdgeInsets.all(32.0),
+       child: Text(
+        _value.toString()
         ),
       ),
     );  
